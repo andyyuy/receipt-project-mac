@@ -24,7 +24,7 @@ response = chat(
     messages=[
         {
             "role": "user",
-            "content": f"What the person look like who would buy this items? {receipt_text}",
+            "content": f"This is the text from a receipt. In 10 words or less, can you briefly describe what physical appearance the customer might have in a concise and pithy and brief way? Consider age, race, height, dress sense, etc. {receipt_text}",
         },
     ],
 )
@@ -37,7 +37,7 @@ sd.ensure_models_are_loaded()
 
 # Generate the latent vectors using diffusion
 latents = sd.generate_latents(
-    "an apple",
+    customer_description,
     n_images=N_IMAGES,
     cfg_weight=CFG_WEIGHT,
     num_steps=STEPS,
