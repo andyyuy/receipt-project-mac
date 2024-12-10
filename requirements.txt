@@ -4,3 +4,5 @@ regex
 numpy
 tqdm
 Pillow
+pytesseract
+ollama
